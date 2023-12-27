@@ -83,11 +83,9 @@
 		
 		#precio {
 	           
-		
+		        flex: 1;
 			width: 280px;
-                        margin: 0 auto;
-		
-			
+              	
 	
 		}
 		
