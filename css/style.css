@@ -44,7 +44,7 @@ main {
 	background-image: url('../img/menu.png');
 	background-size: contain;
 	background-repeat: no-repeat;
-	background-position: center bottom;
+	background-position: center top;
 	height: 100vh;
 
 
