@@ -57,8 +57,7 @@
 		
 		main h2 {
 		
-		    flex:1;
-			
+		    	flex:1;
 			margin-bottom: 20px;
 			padding-top: 20px;
 			color: green;
@@ -132,7 +131,7 @@
 		main h2 {
             
             
-             		margin-top: 100px;
+             		margin-top: 125px;
             
             
         }  
