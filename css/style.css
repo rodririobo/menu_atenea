@@ -1,157 +1,149 @@
+header h4 {
 
-		
-		header h4 {
-                
-	        margin-top:225px;
-			font-size:1.5em;
-			color: white;
-			padding-bottom:0;
-			margin-bottom:0;
-	
-		}
+	margin-top: 225px;
+	font-size: 1.5em;
+	color: white;
+	padding-bottom: 0;
+	margin-bottom: 0;
 
-		#contenedor header {
-			
-	        flex:1;
-		    background-image: url('../img/atenea.jpg');
-			background-position: center center;
-			background-size: cover;
-			background-repeat: no-repeat;
-		 
-			
-			
-		}
-		
-			#contenedor {
-	   
-            display: flex;
-			width:99%;
-			margin: 0 auto;
-            font-family: Arial, sans-serif;
-            flex-direction: column;
-			align-content: center;
-			justify-content: center;
-            min-height: 100vh;
-            text-align:center;
-			background: linear-gradient(to left, #c0c0c0, #f0f0f0);
-			padding:0;
-        
-		}
+}
 
-        main {
-			
-			display: flex;
-			flex-direction: column;
-		    flex:1;
-            background-color: #fff;
-            
-			background: linear-gradient(to left, #c0c0c0, #f0f0f0);
-			background-image: url('../img/menu.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center bottom;
-            height: 100vh;
-	
-			
-        }
-		
-		main h2 {
-		
-		    flex:1;
-			margin-bottom:20px;
-			padding:0;
-			color:green;
-			width:100%;
-		
+#contenedor header {
 
-		}
-		
-		#contenedor > h2 {
-			
-			color: blue;
-			
-		}
-						
-		#resultado {
-			
-            flex:1;
-			margin:0;
-			padding:0;
-			list-style:none;
-			width:100%;
-          
-		}	
-		
-		
-		#precio {
-			
-           
-		
-			width:280px;
-                    
-        
-                margin:0 auto;
-		
-			
-	
-		}
-		
-		
-		footer {
-		    
-			
-            font-size:1.2em;
-            color: green;
-            padding: 10px;
+	flex: 1;
+	background-image: url('../img/atenea.jpg');
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
 
-        
-		}
-		
-		
-		
-	
-		
-		    /* Estilo para resaltar elementos especÃ­ficos y tabular el resto */
-	
-		#resultado li {
-		
-			margin:5px;
-			padding:0;
-			font-size: 1.2em;
-			color:#e3179f;
-		}
 
-		#resultado li.resaltado {
-	
-			font-weight: bold;
-			font-size: 1.5em;
-			color: red;
-	  
-		}
-		
-	
-				
-		main h2 {
-            
-            
-             margin-top: 100px;
-            
-            
-        }  
-		
+}
 
-    @media (min-width: 380px) and (max-width: 2400px) {
-      header, main, footer {
-           padding: 15px;
-      }
-	  
-	  	main h2 {
-            
-            
-             margin-top: 100px;
-            
-            
-    } 
-       	
-	  
-    } 	
+#contenedor {
+	font-family: Arial, sans-serif;
+	display: flex;
+	flex-wrap: wrap;
+
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	text-align: center;
+	background: linear-gradient(to left, #c0c0c0, #f0f0f0);
+	padding: 0;
+
+}
+
+main {
+
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	background-color: #fff;
+
+	background: linear-gradient(to left, #c0c0c0, #f0f0f0);
+	background-image: url('../img/menu.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	height: 100vh;
+
+
+}
+
+main h2 {
+
+	flex: 1;
+	margin-bottom: 20px;
+	padding: 0;
+	color: green;
+	width: 100%;
+
+
+}
+
+#contenedor>h2 {
+
+	color: blue;
+
+}
+
+#resultado {
+
+	flex: 1;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	width: 100%;
+
+}
+
+
+#precio {
+
+
+	width: 280px;
+
+
+	margin: 0 auto;
+
+
+}
+
+
+footer {
+
+
+	font-size: 1.2em;
+	color: green;
+	padding: 10px;
+
+
+}
+
+
+/* Estilo para resaltar elementos especÃ­ficos y tabular el resto */
+
+#resultado li {
+
+	margin: 5px;
+	padding: 0;
+	font-size: 1.2em;
+	color: #e3179f;
+}
+
+#resultado li.resaltado {
+
+	font-weight: bold;
+	font-size: 1.5em;
+	color: red;
+
+}
+
+
+main h2 {
+
+
+	margin-top: 100px;
+
+
+}
+
+
+@media (min-width: 380px) and (max-width: 2400px) {
+
+	header,
+	main,
+	footer {
+		padding: 15px;
+	}
+
+	main h2 {
+
+
+		margin-top: 100px;
+
+
+	}
+
+
+}
