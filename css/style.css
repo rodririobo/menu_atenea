@@ -12,7 +12,7 @@
 
 		#contenedor header {
 			
-	        	flex:1;
+	        	display: flex;
 		    	background-image: url('../img/atenea.jpg');
 			background-position: center center;
 			background-size: cover;
