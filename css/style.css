@@ -29,7 +29,7 @@
 			font-family: Arial, sans-serif;
             		flex-direction: column;
 			justify-content: center;
-			align-items: center;
+			
             		min-height: 100vh;
             		text-align: center;
 			background: linear-gradient(to left, #c0c0c0, #f0f0f0);
