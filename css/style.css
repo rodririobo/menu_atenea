@@ -81,10 +81,10 @@
 		
 		#precio {
 	           
-		       
+		        flex: 1;   
 			width: 280px;
-              	
-	
+			align-self: center;
+		
 		}
 		
 		
