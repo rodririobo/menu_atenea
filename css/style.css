@@ -3,7 +3,7 @@
 		
 		header h4 {
                 
-	        margin-top:200px;
+	        	margin-top: 200px;
 			font-size:1.5em;
 			color: white;
 			padding-bottom:0;
@@ -13,8 +13,8 @@
 
 		#contenedor header {
 			
-	        flex:1;
-		    background-image: url('../img/atenea.jpg');
+	        	flex:1;
+		    	background-image: url('../img/atenea.jpg');
 			background-position: center center;
 			background-size: cover;
 			background-repeat: no-repeat;
@@ -23,35 +23,34 @@
 			
 		}
 		
-			#contenedor {
+		#contenedor {
 	   
-            display: flex;
-			width:99%;
+            		display: flex;
+			width: 99%;
 			margin: 0 auto;
-            font-family: Arial, sans-serif;
-            flex-direction: column;
+            		font-family: Arial, sans-serif;
+            		flex-direction: column;
 			align-content: center;
 			justify-content: center;
-            min-height: 100vh;
-            text-align:center;
+            		min-height: 100vh;
+            		text-align: center;
 			background: linear-gradient(to left, #c0c0c0, #f0f0f0);
-			padding:0;
+			padding: 0;
         
 		}
 
-        main {
+        	main {
 			
 			display: flex;
 			flex-direction: column;
-		    flex:1;
-            background-color: #fff;
-            
+		    	flex: 1;
+            		background-color: #fff;
 			background: linear-gradient(to left, #c0c0c0, #f0f0f0);
 			background-image: url('../img/menu.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center bottom;
-            height: 100vh;
+            		background-size: contain;
+            		background-repeat: no-repeat;
+            		background-position: center bottom;
+            		height: 100vh;
 	
 			
         }
@@ -60,10 +59,10 @@
 		
 		    flex:1;
 			
-			margin-bottom:20px;
-			padding-top:20px;
-			color:green;
-			width:100%;
+			margin-bottom: 20px;
+			padding-top: 20px;
+			color: green;
+			width: 100%;
 		
 
 		}
@@ -76,23 +75,20 @@
 						
 		#resultado {
 			
-            flex:1;
-			margin:0;
-			padding:0;
-			list-style:none;
-			width:100%;
+            		flex: 1;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			width: 100%;
           
 		}	
 		
 		
 		#precio {
-			
-           
+	           
 		
-			width:280px;
-                    
-        
-                margin:0 auto;
+			width: 280px;
+                        margin: 0 auto;
 		
 			
 	
@@ -102,9 +98,9 @@
 		footer {
 		    
 			
-            font-size:1.2em;
-            color: green;
-            padding: 10px;
+            		font-size: 1.2em;
+            		color: green;
+            		padding: 10px;
 
         
 		}
@@ -117,10 +113,10 @@
 	
 		#resultado li {
 		
-			margin:5px;
-			padding:0;
+			margin: 5px;
+			padding: 0;
 			font-size: 1.2em;
-			color:#e3179f;
+			color: #e3179f;
 		}
 
 		#resultado li.resaltado {
@@ -136,20 +132,20 @@
 		main h2 {
             
             
-             margin-top: 100px;
+             		margin-top: 100px;
             
             
         }  
 		
 
     @media (min-width: 380px) and (max-width: 2400px) {
-      header, main, footer {
-           padding: 15px;
-      }
+     		
+	    header, main, footer {
+           	padding: 15px;
+      	   }
 	  
-	  	main h2 {
-            
-            
+	  main h2 {
+                      
              margin-top: 100px;
             
             
