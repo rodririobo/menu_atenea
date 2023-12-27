@@ -26,10 +26,8 @@
 		#contenedor {
 	   
             		display: flex;
-			flex-wrap: wrap;
 			font-family: Arial, sans-serif;
             		flex-direction: column;
-			align-content: center;
 			justify-content: center;
             		height: 100vh;
             		text-align: center;
