@@ -1,6 +1,6 @@
 header h4 {
 
-	margin-top: 225px;
+	margin-top: 180px;
 	font-size: 1.5em;
 	color: white;
 	padding-bottom: 0;
@@ -134,7 +134,7 @@ main h2 {
 	header,
 	main,
 	footer {
-		padding: 15px;
+		padding: 25px;
 	}
 
 	main h2 {
