@@ -83,7 +83,7 @@
 		
 		#precio {
 	           
-		        flex: 1;
+		       
 			width: 280px;
               	
 	
@@ -92,7 +92,7 @@
 		
 		footer {
 		    
-			
+			flex: 1;
             		font-size: 1.2em;
             		color: green;
             		padding: 10px;
