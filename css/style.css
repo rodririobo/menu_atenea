@@ -19,7 +19,7 @@
     			background-size: cover;
     			background-repeat: no-repeat;
     			justify-content: space-evenly;
-    			align-items: baseline;
+    			align-items: flex-end
 		}
 
 		#contenedor {
