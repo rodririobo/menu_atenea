@@ -20,10 +20,10 @@ header h4 {
 }
 
 #contenedor {
+
 	font-family: Arial, sans-serif;
 	display: flex;
 	flex-wrap: wrap;
-
 	flex-direction: column;
 	align-content: center;
 	justify-content: center;
