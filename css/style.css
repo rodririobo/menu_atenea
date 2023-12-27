@@ -18,7 +18,8 @@
 			background-position: center center;
 			background-size: cover;
 			background-repeat: no-repeat;
-			justify-content: center flex-end;
+			justify-content: flex-end;
+			height: 200px;
 						
 			
 		}
