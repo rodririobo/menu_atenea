@@ -126,15 +126,7 @@
 	  
 		}
 		
-	
-				
-		main h2 {
-            
-            
-             		margin-top: 150px;
-            
-            
-        }  
+  
 		
 
     @media (min-width: 380px) and (max-width: 2400px) {
@@ -145,7 +137,7 @@
 	  
 	  main h2 {
                       
-             margin-top: 200px;
+            
             
             
     } 
