@@ -6,7 +6,8 @@
 	        	font-size:1.5em;
 			color: white;
 			padding-bottom: 0;
-			margin-bottom: 0;  
+			margin-bottom: 0; 
+			margin: 0 auto;
 	
 		}
 
@@ -18,8 +19,7 @@
 			background-size: cover;
 			background-repeat: no-repeat;
 			justify-content: center flex-end;
-		 
-			
+						
 			
 		}
 		
