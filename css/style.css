@@ -1,64 +1,67 @@
-  
-	
+
 		
 		header h4 {
                 
-	        	font-size:1.5em;
+	        margin-top:225px;
+			font-size:1.5em;
 			color: white;
-			padding-bottom: 0;
-			margin-bottom: 0; 
-			
+			padding-bottom:0;
+			margin-bottom:0;
 	
 		}
 
 		#contenedor header {
-    
-			display: flex;
-    			background-image: url('../img/atenea.jpg');
-    			background-position: center center;
-    			background-size: cover;
-    			background-repeat: no-repeat;
-    			justify-content: center;
-    			align-items: flex-end;
-			height: 200px;
-		}
-
-		#contenedor {
-	   
-            		display: flex;
-			font-family: Arial, sans-serif;
-            		flex-direction: column;
-			justify-content: center;
 			
-            		min-height: 100vh;
-            		text-align: center;
+	        flex:1;
+		    background-image: url('../img/atenea.jpg');
+			background-position: center center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		 
+			
+			
+		}
+		
+			#contenedor {
+	   
+            display: flex;
+			width:99%;
+			margin: 0 auto;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+			align-content: center;
+			justify-content: center;
+            min-height: 100vh;
+            text-align:center;
 			background: linear-gradient(to left, #c0c0c0, #f0f0f0);
-			padding: 0;
+			padding:0;
         
 		}
 
-        	main {
+        main {
 			
 			display: flex;
 			flex-direction: column;
-		    	flex: 1;
-            		background-color: #fff;
+		    flex:1;
+            background-color: #fff;
+            
 			background: linear-gradient(to left, #c0c0c0, #f0f0f0);
 			background-image: url('../img/menu.png');
-            		background-size: contain;
-            		background-repeat: no-repeat;
-            		background-position: center; 
-            		min-height: 100vh;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            height: 100vh;
 	
 			
-       		 }
+        }
 		
 		main h2 {
 		
-		    	flex:1;
-			margin-bottom: 20px;
-			color: green;
-			width: 100%;
+		    flex:1;
+			margin-bottom:20px;
+			padding:0;
+			color:green;
+			width:100%;
 		
 
 		}
@@ -71,30 +74,35 @@
 						
 		#resultado {
 			
-            		flex: 1;
-			margin: 0;
-			padding: 0;
-			list-style: none;
-			width: 100%;
+            flex:1;
+			margin:0;
+			padding:0;
+			list-style:none;
+			width:100%;
           
 		}	
 		
 		
 		#precio {
-	           
-		        flex: 1;   
-			width: 280px;
-			align-self: center;
+			
+           
 		
+			width:280px;
+                    
+        
+                margin:0 auto;
+		
+			
+	
 		}
 		
 		
-		#pie {
+		footer {
 		    
-			flex: 1;
-            		font-size: 1.2em;
-            		color: green;
-            		padding: 10px;
+			
+            font-size:1.2em;
+            color: green;
+            padding: 10px;
 
         
 		}
@@ -103,14 +111,14 @@
 		
 	
 		
-		    /* Estilo para resaltar elementos específicos y tabular el resto */
+		    /* Estilo para resaltar elementos especÃ­ficos y tabular el resto */
 	
 		#resultado li {
 		
-			margin: 5px;
-			padding: 0;
+			margin:5px;
+			padding:0;
 			font-size: 1.2em;
-			color: #e3179f;
+			color:#e3179f;
 		}
 
 		#resultado li.resaltado {
@@ -121,22 +129,29 @@
 	  
 		}
 		
-  
+	
+				
+		main h2 {
+            
+            
+             margin-top: 100px;
+            
+            
+        }  
 		
 
-    @media (min-width: 375px) and (max-width: 2400px) {
-     		
-	    header, main, footer {
-           	padding: 15px;
-      	   }
+    @media (min-width: 380px) and (max-width: 2400px) {
+      header, main, footer {
+           padding: 15px;
+      }
 	  
-	  main h2 {
-                      
-            margin-top: 125px;
+	  	main h2 {
+            
+            
+             margin-top: 100px;
             
             
     } 
        	
 	  
     } 	
-		
