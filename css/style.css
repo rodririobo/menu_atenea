@@ -26,7 +26,6 @@
 		#contenedor {
 	   
             		display: flex;
-			width: 99%;
 			margin: 0 auto;
             		font-family: Arial, sans-serif;
             		flex-direction: column;
