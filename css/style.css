@@ -26,12 +26,12 @@
 		#contenedor {
 	   
             		display: flex;
-			margin: 0 auto;
-            		font-family: Arial, sans-serif;
+			flex-wrap: wrap;
+			font-family: Arial, sans-serif;
             		flex-direction: column;
 			align-content: center;
 			justify-content: center;
-            		min-height: 100vh;
+            		height: 100vh;
             		text-align: center;
 			background: linear-gradient(to left, #c0c0c0, #f0f0f0);
 			padding: 0;
