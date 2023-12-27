@@ -127,7 +127,7 @@
   
 		
 
-    @media (min-width: 380px) and (max-width: 2400px) {
+    @media (min-width: 375px) and (max-width: 2400px) {
      		
 	    header, main, footer {
            	padding: 15px;
