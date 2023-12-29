@@ -42,7 +42,7 @@ main {
 
 	background: linear-gradient(to left, #c0c0c0, #f0f0f0);
 	background-image: url('../img/menu.png');
-	background-size: contain;
+	background-size: auto auto;
 	background-repeat: no-repeat;
 	background-position: center top;
 	height: 100vh;
