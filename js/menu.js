@@ -1,4 +1,4 @@
- function obtenerContenido() {
+function obtenerContenido() {
       // Reemplaza la URL dentro de las comillas con la URL que deseas obtener
       const url = 'https://docs.google.com/document/d/e/2PACX-1vSBp2u6ZFsG4bA6WO1HIKDGWy4mRSBh5XESwO95DU9VeezCf_bbW61a7aigJKKWGPtPmr5EAVtM6sUz/pub';
 
@@ -52,12 +52,18 @@
 				ultimoParrafo.textContent = textoSinComillas;
 				menu.appendChild(ultimoParrafo);
 				//document.body.appendChild(linea1);
-          }else { 
-		        listItem.textContent = textoSinComillas;
-				lista.appendChild(listItem);	
-				}			
+                
+          }else{ 
+		       
+                listItem.textContent = textoSinComillas;
+				lista.appendChild(listItem);
+                  
+                 
+                }			
               }
             });
+            agregarImagenesALista(url); 
+				
 	
           } else {
             console.error('No se encontró el contenido específico.');
@@ -71,6 +77,28 @@
 
 	if(window.addEventListener) {
 		window.addEventListener('load',obtenerContenido,false); //W3C
+        
 	}else{
-    window.attachEvent('onload',obtenerContenido); //IE
+    	window.attachEvent('onload',obtenerContenido); //IE
+       
 	}
+
+function agregarImagenesALista(url) {
+  fetch(url)
+    .then(response => response.text())
+    .then(data => {
+      const parser = new DOMParser();
+      const htmlDocument = parser.parseFromString(data, 'text/html');
+      const imagenes = htmlDocument.querySelectorAll('img');
+      const lista = document.getElementById('resultado');
+
+      imagenes.forEach(imagen => {
+        const listItem = document.createElement('li');
+        listItem.appendChild(imagen.cloneNode(true));
+        lista.appendChild(listItem);
+      });
+    })
+    .catch(error => {
+      console.error('Hubo un error al obtener o procesar la página:', error);
+    });
+}
