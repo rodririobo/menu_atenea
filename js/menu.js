@@ -92,8 +92,8 @@ fetch(url)
   const imagenes = htmlDocument.querySelectorAll('img');
   const lista = document.getElementById('resultado');
   const listItem = document.createElement('li');
+  
   imagenes.forEach(imagen => {
-    
     listItem.appendChild(imagen.cloneNode(true));
     lista.appendChild(listItem);
   });
