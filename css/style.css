@@ -1,4 +1,4 @@
-li:last-child:has(img){ 
+li:last-child:has(img){
 
 	display: flex;  
 	flex-direction: row;
