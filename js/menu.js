@@ -56,7 +56,7 @@ function obtenerContenido() {
       }else{ 
        
             listItem.textContent = textoSinComillas;
-    lista.appendChild(listItem);
+    		lista.appendChild(listItem);
               
              
             }			
