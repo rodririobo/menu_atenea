@@ -42,16 +42,12 @@ function obtenerContenido() {
    // Verificar si es la última iteración
 
   if (index === textos.length - 1) {
-  // Agregar el último texto al cuerpo como un elemento <p>
-      //const linea = document.createElement('hr');
-    //const linea1 = document.createElement('hr');
-    
-    //document.body.appendChild(linea);
+ 
     const menu = document.getElementById("precio");
     const ultimoParrafo = document.createElement('p');
     ultimoParrafo.textContent = textoSinComillas;
     menu.appendChild(ultimoParrafo);
-    //document.body.appendChild(linea1);
+ 
             
       }else{ 
        
