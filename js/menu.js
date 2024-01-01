@@ -91,12 +91,12 @@ function agregarImagenesALista(url) {
 		const htmlDocument = parser.parseFromString(data, 'text/html');
 		const imagenes = htmlDocument.querySelectorAll('img');
 		const lista = document.getElementById('resultado');
-		
+		const listItem = document.createElement('li');
 		imagenes.forEach(imagen => {
 		  const src = imagen.getAttribute('src'); // Obtener el valor del atributo src
 		  const nuevaImagen = document.createElement('img'); // Crear un nuevo elemento img
 		  nuevaImagen.src = src; // Asignar el origen recuperado a la nueva imagen
-		  const listItem = document.createElement('li');
+		  
 		  listItem.appendChild(nuevaImagen); // Agregar la nueva imagen al elemento li
 		  lista.appendChild(listItem); // Agregar el elemento li a la lista
 		});
