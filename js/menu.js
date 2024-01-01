@@ -84,20 +84,24 @@ window.addEventListener('load',obtenerContenido,false); //W3C
 }
 
 function agregarImagenesALista(url) {
-fetch(url)
-.then(response => response.text())
-.then(data => {
-  const parser = new DOMParser();
-  const htmlDocument = parser.parseFromString(data, 'text/html');
-  const imagenes = htmlDocument.querySelectorAll('img');
-  const lista = document.getElementById('resultado');
-  const listItem = document.createElement('li');
-  
-  imagenes.forEach(imagen => {
-    listItem.appendChild(imagen.cloneNode(true));
-    lista.appendChild(listItem);
-  });
-})
-.catch(error => {
-  console.error('Hubo un error al obtener o procesar la página:', error);
-});}
+	fetch(url)
+	  .then(response => response.text())
+	  .then(data => {
+		const parser = new DOMParser();
+		const htmlDocument = parser.parseFromString(data, 'text/html');
+		const imagenes = htmlDocument.querySelectorAll('img');
+		const lista = document.getElementById('resultado');
+		
+		imagenes.forEach(imagen => {
+		  const src = imagen.getAttribute('src'); // Obtener el valor del atributo src
+		  const nuevaImagen = document.createElement('img'); // Crear un nuevo elemento img
+		  nuevaImagen.src = src; // Asignar el origen recuperado a la nueva imagen
+		  const listItem = document.createElement('li');
+		  listItem.appendChild(nuevaImagen); // Agregar la nueva imagen al elemento li
+		  lista.appendChild(listItem); // Agregar el elemento li a la lista
+		});
+	  })
+	  .catch(error => {
+		console.error('Hubo un error al obtener o procesar la página:', error);
+	  });
+  }
