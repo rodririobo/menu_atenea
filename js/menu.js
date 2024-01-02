@@ -47,13 +47,14 @@ function obtenerContenido() {
        
       }else{ 
        
-            // verifica que no empieze por #, en caso contrario añade el item.
-            if (textoSinComillas.trim() !== "" && !textoSinComillas.trim().startsWith("#")) {
-                listItem.textContent = textoSinComillas.trim();
-                lista.appendChild(listItem);
-              }
-  
-          }			
+        // verifica que no empieze por #, en caso contrario añade el item.
+        if (textoSinComillas.trim() !== "" && !textoSinComillas.trim().startsWith("#")) {
+          listItem.textContent = textoSinComillas.trim();
+          lista.appendChild(listItem);
+      }
+              
+             
+            }			
           }
         });
         agregarImagenesALista(url); 
