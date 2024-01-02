@@ -37,22 +37,18 @@ function obtenerContenido() {
            if (textoSinComillas.trim().toLowerCase() === 'domingo' || textoSinComillas.trim().toLowerCase() === 'primeros' || textoSinComillas.trim().toLowerCase() === 'segundos' || textoSinComillas.trim().toLowerCase() === 'postre') {
     listItem.classList.add('resaltado');
     }
-
     
-   // Verificar si es la última iteración
-
-  if (index === textos.length - 1) {
- 
-    const menu = document.getElementById("precio");
-    const ultimoParrafo = document.createElement('p');
-    ultimoParrafo.textContent = textoSinComillas;
-    menu.appendChild(ultimoParrafo);
- 
-            
+   // Verifica si es la línea que empieza por precio
+   if (textoSinComillas.toLowerCase().startsWith("precio")) {
+          const menu = document.getElementById("precio");
+          const nuevoParrafo = document.createElement('p');
+          nuevoParrafo.textContent = textoSinComillas;
+          menu.appendChild(nuevoParrafo);
+       
       }else{ 
        
-            listItem.textContent = textoSinComillas;
-    		lista.appendChild(listItem);
+          listItem.textContent = textoSinComillas;
+    		  lista.appendChild(listItem);
               
              
             }			
@@ -60,7 +56,6 @@ function obtenerContenido() {
         });
         agregarImagenesALista(url); 
     
-
       } else {
         console.error('No se encontró el contenido específico.');
       }

@@ -91,6 +91,7 @@ main h2 {
 
 #precio {
 
+  align-self: center;
   width: 280px;
 
 }
