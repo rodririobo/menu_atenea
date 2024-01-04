@@ -1,5 +1,6 @@
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 
-1i:last-child:has(img){ 
+li:last-child:has(img){ 
 
 	display: flex;  
 	flex-direction: row;
@@ -11,6 +12,7 @@
 
  width: 115px;
  height: 115px;
+ margin-top: 25px;
 
 
  }
@@ -81,29 +83,76 @@ main h2 {
 
 #resultado {
 
+  font-family: "Times New Roman", Georgia, Verdana, Helvetica, Arial, sans-serif;
   flex: 1;
   margin: 0;
   padding: 0;
   list-style: none;
   width: 100%;
-
+  font-weight: bold;
 }
 
 #precio {
 
+  font-size: 1.2em;
   align-self: center;
   width: 280px;
-
+  color: green;
+  font-weight: bold;
 }
 
 
-footer {
+#pie {
 
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
   font-size: 1.2em;
-  color: green;
   padding: 10px;
 
 }
+
+.icono-red-social {
+  
+  display: flex;
+  font-size: 50px;
+  color: #333;
+  margin: 10px;
+  justify-content: space-evenly;
+ 
+}
+
+a.fa {
+  
+  position: relative;
+  text-decoration: none;
+  width: 70px;
+  height: 70px;
+  
+}
+
+.fa-whatsapp, .fa-facebook {
+  
+  background-color:green;
+  color:white;
+  border-radius:30%;
+   
+}
+
+a.fa::before {
+
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.fa-facebook {
+
+  background-color:blue;
+
+}
+
 
 /* Estilo para resaltar elementos especÃ­ficos y tabular el resto */
 
@@ -112,8 +161,7 @@ footer {
   margin: 5px;
   padding: 0;
   font-size: 1.2em;
-  color: #e3179f;
-
+  
 }
 
 #resultado li.resaltado {
