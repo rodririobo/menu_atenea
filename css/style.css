@@ -96,7 +96,7 @@ main h2 {
 
   font-size: 1.2em;
   align-self: center;
-  width: 280px;
+  width: 300px;
   color: green;
   font-weight: bold;
 }
@@ -131,7 +131,7 @@ a.fa {
   
 }
 
-.fa-whatsapp, .fa-facebook {
+.fa-whatsapp, .fa-facebook, .fa-envelope{
   
   background-color:green;
   color:white;
@@ -151,6 +151,13 @@ a.fa::before {
 
   background-color:blue;
 
+}
+
+.fa-envelope {
+
+ background-color:violet;
+ 
+font-size: 45px;
 }
 
 
