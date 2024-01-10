@@ -34,9 +34,18 @@ function obtenerContenido() {
           if (textoSinComillas.trim() !== '') {
             const listItem = document.createElement('li');
             // Resaltar elementos específicos y aplicar estilos de padding
-           if (textoSinComillas.trim().toLowerCase() === 'domingo' || textoSinComillas.trim().toLowerCase() === 'primeros' || textoSinComillas.trim().toLowerCase() === 'segundos' || textoSinComillas.trim().toLowerCase() === 'postre') {
-    listItem.classList.add('resaltado');
-    }
+          switch (textoSinComillas.trim().toLowerCase()) {
+            case 'domingo':
+            case 'primeros':
+            case 'segundos':
+            case 'postre':
+            listItem.classList.add('resaltado');
+            break;
+            default:
+                // Resto del código...
+            break;
+            }
+            
     
    // Verifica si es la línea que empieza por precio
    if (textoSinComillas.toLowerCase().startsWith("precio")) {
