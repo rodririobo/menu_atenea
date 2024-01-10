@@ -29,7 +29,7 @@ function obtenerContenido() {
         const lista = document.getElementById('resultado');
         textos.forEach((texto, index) => {
           // Quitar comillas del texto antes de agregarlo a la lista
-           const textoSinComillas = texto.replace(/["']/g, " ").trim();
+          const textoSinComillas = texto.replace(/["']/g, " ").trim();
           // Solo agregar elementos li si el texto no está vacío
           if (textoSinComillas.trim() !== '') {
             const listItem = document.createElement('li');
@@ -48,25 +48,25 @@ function obtenerContenido() {
             
     
    // Verifica si es la línea que empieza por precio
-   if (textoSinComillas.toLowerCase().startsWith("precio")) {
+  if (textoSinComillas.toLowerCase().startsWith("precio")) {
           const menu = document.getElementById("precio");
           const nuevoParrafo = document.createElement('p');
           nuevoParrafo.textContent = textoSinComillas;
           menu.appendChild(nuevoParrafo);
-       
+      
       }else{ 
-       
+      
         // verifica que no empieze por #, en caso contrario añade el item.
         if (textoSinComillas.trim() !== "" && !textoSinComillas.trim().startsWith("#")) {
           listItem.textContent = textoSinComillas.trim();
           lista.appendChild(listItem);
       }
-              
-             
-            }			
-          }
-        });
-        agregarImagenesALista(url); 
+      
+      
+          }			
+        }
+      });
+    agregarImagenesALista(url); 
     
       } else {
         console.error('No se encontró el contenido específico.');
@@ -75,7 +75,6 @@ function obtenerContenido() {
     .catch(error => {
       console.error('Error:', error);
     });
-
 } 
 
 if(window.addEventListener) {
@@ -83,7 +82,7 @@ window.addEventListener('load',obtenerContenido,false); //W3C
     
 }else{
   window.attachEvent('onload',obtenerContenido); //IE
-   
+
 }
 
 function agregarImagenesALista(url) {
@@ -99,7 +98,6 @@ function agregarImagenesALista(url) {
 		  const src = imagen.getAttribute('src'); // Obtener el valor del atributo src
 		  const nuevaImagen = document.createElement('img'); // Crear un nuevo elemento img
 		  nuevaImagen.src = src; // Asignar el origen recuperado a la nueva imagen
-		  
 		  listItem.appendChild(nuevaImagen); // Agregar la nueva imagen al elemento li
 		  lista.appendChild(listItem); // Agregar el elemento li a la lista
 		});
@@ -107,4 +105,4 @@ function agregarImagenesALista(url) {
 	  .catch(error => {
 		console.error('Hubo un error al obtener o procesar la página:', error);
 	  });
-  }
+}
