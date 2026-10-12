@@ -1,6 +1,6 @@
 function obtenerContenido() {
   // Reemplaza la URL dentro de las comillas con la URL que deseas obtener
-  const url = 'https://docs.google.com/document/d/e/2PACX-1vSBp2u6ZFsG4bA6WO1HIKDGWy4mRSBh5XESwO95DU9VeezCf_bbW61a7aigJKKWGPtPmr5EAVtM6sUz/pub';
+  const url = 'https://docs.google.com/document/d/1YyetOmG7ak8Zevty7QEA2cZ29G6PgUxWc8eGRlJOb6E/pub';
 
   // Realizar la solicitud usando fetch
   fetch(url)
