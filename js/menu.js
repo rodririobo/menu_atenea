@@ -66,7 +66,7 @@ function obtenerContenido() {
           }
         }
       });
-    agregarImagenesALista(url);
+    agregarImagenesALista(doc);
 
       } else {
         console.error('No se encontró el contenido específico.');
@@ -85,38 +85,24 @@ window.addEventListener('load',obtenerContenido,false); //W3C
 
 }
 
-function agregarImagenesALista(url) {
-  fetch(url, { cache: 'no-store' })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`Error HTTP ${response.status}`);
-      }
-      return response.text();
-    })
-    .then(data => {
-      const parser = new DOMParser();
-      const htmlDocument = parser.parseFromString(data, 'text/html');
-      const imagenes = htmlDocument.querySelectorAll('img');
-      const lista = document.getElementById('resultado');
+function agregarImagenesALista(doc) {
+  const imagenes = doc.querySelectorAll('img');
+  const lista = document.getElementById('resultado');
 
-      imagenes.forEach(imagen => {
-        const src = imagen.getAttribute('src');
-        if (!src) return;
+  imagenes.forEach(imagen => {
+    const src = imagen.getAttribute('src');
+    if (!src) return;
 
-        const listItem = document.createElement('li');
-        const nuevaImagen = document.createElement('img');
+    const listItem = document.createElement('li');
+    const nuevaImagen = document.createElement('img');
 
-        nuevaImagen.src = src;
-        nuevaImagen.alt = imagen.alt || 'Imagen del menú';
-        nuevaImagen.loading = 'lazy';
-        nuevaImagen.style.maxWidth = '100%';
-        nuevaImagen.style.height = 'auto';
+    nuevaImagen.src = src;
+    nuevaImagen.alt = imagen.alt || 'Imagen del menú';
+    nuevaImagen.loading = 'lazy';
+    nuevaImagen.style.maxWidth = '100%';
+    nuevaImagen.style.height = 'auto';
 
-        listItem.appendChild(nuevaImagen);
-        lista.appendChild(listItem);
-      });
-    })
-    .catch(error => {
-      console.error('Error al cargar las imágenes del menú:', error);
-    });
+    listItem.appendChild(nuevaImagen);
+    lista.appendChild(listItem);
+  });
 }
