@@ -86,23 +86,43 @@ window.addEventListener('load',obtenerContenido,false); //W3C
 }
 
 function agregarImagenesALista(doc) {
-  const imagenes = doc.querySelectorAll('img');
+  const endpoint = 'https://script.google.com/macros/s/AKfycbz0mKYfoafhi9Yth5AxHVUWdopqpauPEt1n7zthii8BjaJ7WMhog9-hbAqVCsahaceyFw/exec';
   const lista = document.getElementById('resultado');
 
-  imagenes.forEach(imagen => {
-    const src = imagen.getAttribute('src');
-    if (!src) return;
+  // Evitar duplicar imágenes si se vuelve a cargar el menú.
+  lista.querySelectorAll('.imagen-menu').forEach(item => item.remove());
 
-    const listItem = document.createElement('li');
-    const nuevaImagen = document.createElement('img');
+  const callback = 'menuAteneaImagenes';
+  const script = document.createElement('script');
 
-    nuevaImagen.src = src;
-    nuevaImagen.alt = imagen.alt || 'Imagen del menú';
-    nuevaImagen.loading = 'lazy';
-    nuevaImagen.style.maxWidth = '100%';
-    nuevaImagen.style.height = 'auto';
+  window[callback] = function(imagenes) {
+    delete window[callback];
+    script.remove();
 
-    listItem.appendChild(nuevaImagen);
-    lista.appendChild(listItem);
-  });
+    imagenes.forEach(imagen => {
+      if (!imagen.datos || !imagen.tipo) return;
+
+      const listItem = document.createElement('li');
+      listItem.classList.add('imagen-menu');
+
+      const nuevaImagen = document.createElement('img');
+      nuevaImagen.src = `data:${imagen.tipo};base64,${imagen.datos}`;
+      nuevaImagen.alt = imagen.alt || 'Imagen del menú';
+      nuevaImagen.loading = 'lazy';
+      nuevaImagen.style.maxWidth = '100%';
+      nuevaImagen.style.height = 'auto';
+
+      listItem.appendChild(nuevaImagen);
+      lista.appendChild(listItem);
+    });
+  };
+
+  script.onerror = function() {
+    delete window[callback];
+    script.remove();
+    console.error('No se pudieron cargar las imágenes desde Google Apps Script.');
+  };
+
+  script.src = `${endpoint}?callback=${callback}&t=${Date.now()}`;
+  document.head.appendChild(script);
 }
